@@ -37,6 +37,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000"
 ]
 # Application definition
+CORS_EXPOSE_HEADERS = ['Content-Type','X-CSRFToken']
+CORS_ALLOW_CREDENTIALS = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',

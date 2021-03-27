@@ -22,4 +22,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('service_center/',include('service_centers.urls'))
 
-]
+
