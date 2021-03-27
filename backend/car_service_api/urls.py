@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import csrf, ping
+from .views import csrf, ping, login_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('csrf/', csrf),
     path('ping/', ping),
+    path('login/', login_view),
+    path('logout/', logout_view),
 ]
