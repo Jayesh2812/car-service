@@ -25,38 +25,57 @@
           <div class="tab-content" id="myTabContent">
               <!-- active requests -->
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                {% for req in activerequests %}
                 <div class="row mt-4 bg-light p-2 text-center border">
                     <div class="col-md-4">
                         <h6>Requested By</h6>
+                        <p>{{req.requestedBy.user.username}}</p>
                     </div>
 
                     <div class="col-md-4">
                         <h6>Requested On</h6>
+                        <p>{{req.requestedTime}}</p>
                     </div>
                     <div class="col-md-4">
                         <p>
-                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#a{{req.id}}" role="button" aria-expanded="false" aria-controls="a{{req.id}}">
                                 View Details
                             </a>
                         </p>
                     </div>
                     
-                    <div class="collapse" id="collapseExample">
-                        <div class="row bg-white border-light pt-2 ">
+                    <div class="collapse" id="a{{req.id}}">
+                        <div class="row bg-white border-light pt-3 pb-2">
                             <div class="col-md-4">
                                 <h6>Vehicle Type</h6>
-                                <p></p>
+                                <p>{{req.get_vehicleType_display}}</p>
                             </div>
                             <div class="col-md-4">
                                 <h6>Vehicle Number</h6>
-                                <p></p>
+                                <p>{{req.vehicleNumber}}</p>
                             </div>
                             <div class="col-md-4">
                                 <h6>Location</h6>
-                                <p></p>
+                                <p>{{req.address}},{{req.locationState}},{{req.locationCity}}-{{req.locationPinCode}}</p>
                             </div>
-                            <div class="col-md-12">
+                            <hr>
+                            <div class="col-md-4">
                                 <h6>Problem described by customer</h6>
+                                <p>{{req.problemDescriptionByCustomer}}</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h6>Contact number</h6>
+                                <p>{{req.requestedBy.phoneNo}}</p>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <h6>Select Mechanic</h6>
+                                <select name="" id="{{req.id}}" class="form-select">
+                                    <option value="">None</option>
+                                    {% for mech in mechanics %}
+                                    <option value="{{mech.id}}">{{mech.user.username}}</option>
+                                    {% endfor %}
+                                </select>
                                 <p></p>
                             </div>
                             <hr>
@@ -68,6 +87,7 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
 
             <!-- inactive requests -->

@@ -16,9 +16,10 @@ class ServiceCenter(models.Model):
     locationPinCode=models.DecimalField(max_digits=6,decimal_places=0)
     address=models.CharField(max_length=500)
     numberOfMechs=models.DecimalField(max_digits=4,decimal_places=0)
-    baseVisitingCharges=models.DecimalField(max_digits=4,decimal_places=2)
+    baseVisitingCharges=models.DecimalField(max_digits=8,decimal_places=2)
     availableServices= models.CharField(max_length=800)         #along with type of service
 
-
+    def __str__(self):
+        return self.centerName
 
 #Bills

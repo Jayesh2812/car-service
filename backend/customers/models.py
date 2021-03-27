@@ -8,5 +8,7 @@ class Customer(models.Model):
     phoneNo=models.DecimalField(max_digits=10,decimal_places=0)
     emailId=models.EmailField()
 
-
+    
+    def __str__(self):
+        return self.user.username
 
