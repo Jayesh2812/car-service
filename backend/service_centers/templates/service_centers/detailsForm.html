@@ -1,0 +1,61 @@
+{% extends 'service_centers/base.html' %}    
+{% load static %}
+{% block style %}  
+<link rel="stylesheet" href="{% static 'service_centers/css/login.css' %}">
+<script defer src="{% static 'service_centers/js/location.js'%}"></script>
+{% endblock style %}
+
+{% block title %} Customer Login {% endblock title %}
+    
+
+{% block body %}
+
+    <div class="form-div">
+        <h1>Welcome,</h1>
+        <p class="desc">Log in to your Account</p>
+        <form action="" method="POST">
+            <label for="centerName">Service Centre Name</label>
+            <input type="text" name="centerName" id="centerName">
+
+            <label for="openingTime">Opening time</label>
+            <input type="time" name="openingTime" id="openingTime">
+
+            <label for="closingTime">Opening Closing</label>
+            <input type="time" name="closingTime" id="closingTime">
+
+
+            <label for="locationState">State</label>
+
+            <select name="locationState" id="locationState">
+                <option value="">Select State   </option>
+                <!-- JAVASCRIPT Give states -->
+                
+            </select>
+            <label for="locationCity">City</label>
+            <select name="locationCity" id="locationCity">
+                <option value="">Select City</option>
+            </select>
+            <!-- JAVASCRIPT Give states -->
+
+            <label for="locationPinCode">Pin Code</label>
+            <input type="number" name="locationPinCode" id="locationPinCode">
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+
+            <label for="numberOfMechs">Number of Mechanics</label>
+            <input type="number" name="numberOfMechs" id="numberOfMechs">
+
+            <label for="baseVisitingCharges">Base Charge</label>
+            <input type="number" name="baseVisitingCharges" id="baseVisitingCharges">
+
+            <label for="availableServices">Available services</label>
+            <input type="text" name="availableServices" id="availableServices">
+
+            {% csrf_token %}
+            <input type="submit" value="Submit">
+            <p>Don't have a account <a href="{% url 'customers:signup'%}">Sign up here</a></p>
+        </form>
+        {{form.error}}
+    </div>
+{% endblock body %}

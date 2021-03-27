@@ -10,9 +10,9 @@
     background-color: rgba(217, 216, 218, 0.9);
     display: -ms-grid;
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
   }
   
   .form-div {
@@ -20,13 +20,13 @@
     width: 80vw;
     max-width: 80vw;
     height: fit-content;
-
+    margin:1em 0;
     border: 2px solid #8e44ad;
     padding: .5em 3em 1.5em;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(142, 68, 173, 0.8);
   }
-  label, input{
+  label, input,select{
     display:block
 
   }
@@ -65,7 +65,7 @@
     font-weight: 1400;
   }
   
-  form input {
+  form input, select {
     border: 1px solid #747272;
     width: 100%;
     outline: none;
