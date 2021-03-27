@@ -19,11 +19,19 @@ requestStates=[
     (2,'rejected')
 ]
 
+vehicleTypes=[
+    (0,'two wheeler'),
+    (1,'three wheeler'),
+    (2,'four wheeler'),
+    (3,'heavy vehicle'),
+]
+
 class BookingRequest(models.Model):
     requestedBy=models.ForeignKey(Customer,on_delete=models.CASCADE)
     requestedTo=models.ForeignKey(ServiceCenter,on_delete=models.CASCADE)
     assignedMechanic=models.ForeignKey(Mechanic,on_delete=models.CASCADE,default=None)
     vehicleNumber=models.DecimalField(max_digits=6,decimal_places=0)
+    vehicleType=models.IntegerField(choices=vehicleTypes)
     requestState=models.IntegerField(choices=requestStates)
     problemDescriptionByCustomer=models.CharField(max_length=500)
     problemDescriptionByMech=models.CharField(max_length=500,default=None)
