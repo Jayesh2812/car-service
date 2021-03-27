@@ -31,16 +31,14 @@ function App() {
     })
   }
   useEffect(() => {
-    
-    let authUser = checkLogin()
-    if (authUser !== 'null'){  
-      dispatch({type:'SET_USER', user : authUser })
-    }
-    else{
-      dispatch({ type:'SET_USER',user : null })
-    }
     GET('ping').then(data=>{setTestGet(data)})
     POST('ping',{name:'Jayesh'}).then(data=>{setTestPost(data)})
+
+    let authUser = JSON.stringify(checkLogin())
+    if (authUser !== 'null')
+      dispatch({type:"SET_USER", user:authUser})
+    else
+      dispatch({type:"SET_USER", user:null})
 
 
     
