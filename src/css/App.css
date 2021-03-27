@@ -2,37 +2,85 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Signin Css */
+
+.signin{
+  margin-top: 50px;
+  padding-top: 5px;
+  /* background-color: grey; */
+  margin-left: auto;
+  margin-right: auto;
+  height: 375px;
+  width: 300px;
+  /* border: 2px solid black; */
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+.signin input[type=text], .signin input[type=password]{
+  width: 75%;
+  background: #f1f1f1;
+  padding: 15px;
+  /* margin: 5px 0 10px 0; */
+  /* border: none; */
+  border-radius: 5px;
+}
+input[type=text]{
+  margin: 5px 0 10px 0;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.signin button{
+  width: 85%;
+  background: blue;
+  padding: 15px;
+  /* margin: 5px 0 22px 0; */
+  border: none;
+  border-radius: 5px;
+}
+.Forget{
+  margin-top: 2px;
+  text-align: right;
+  /* margin-right: 3px; */
+  padding-right: 35px;
+  color: blue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Signup Css */
+.signup{
+  margin-top: 50px;
+  padding-top: 5px;
+  /* background-color: grey; */
+  margin-left: auto;
+  margin-right: auto;
+  height: 420px;
+  width: 300px;
+  /* border: 2px solid black; */
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+.signup input[type=text], .signup input[type=password], .signup input[type=number], .signup input[type=email]{
+  width: 75%;
+  background: #f1f1f1;
+  padding: 15px;
+  margin: 5px 0 10px 0;
+  /* border: none; */
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.signup button{
+  width: 85%;
+  background: blue;
+  padding: 15px;
+  /* margin: 5px 0 22px 0; */
+  border: none;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+

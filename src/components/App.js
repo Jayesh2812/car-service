@@ -4,6 +4,8 @@ import {useEffect, useState} from 'react'
 import { useStateValue } from './StateProvider';
 import { GET , POST} from './Fetch';
 import { login, logout, checkLogin} from './auth';
+import {Signin} from './Signin.js'
+import {Signup} from './Signup.js'
 
 
 function App() {
@@ -46,14 +48,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Jayesh</h1>
+      {/* <h1>Jayesh</h1>
       <div>
         <p>Test GET request: {testGet}</p>
         <p>Test POST request: {testPost}</p>
         <p>User : {user}</p>
         <button onClick={authLogin}>Login</button>
         <button onClick={authLogout}>Logout</button>
-      </div>
+      </div> */}
+      <Signup/>
     </div>
   );
 }
