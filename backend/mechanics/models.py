@@ -19,7 +19,8 @@ class Mechanic(models.Model):
 requestStates=[
     (0,'pending'),
     (1,'accepted'),
-    (2,'rejected')
+    (2,'rejected'),
+    (3,'completed')
 ]
 
 vehicleTypes=[
