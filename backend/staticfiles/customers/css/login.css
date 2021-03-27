@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: montserrat,poppins;
+  }
+  
+  body {
+    background-color: rgba(142, 68, 173, 0.9);
+    display: -ms-grid;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-div {
+    background-color: white;
+    width: 80vw;
+    max-width: 80vw;
+    height: fit-content;
+
+    border: 2px solid #8e44ad;
+    padding: .5em 3em 1.5em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(142, 68, 173, 0.8);
+  }
+  label, input{
+    display:block
+
+  }
+  label{
+    display:block;
+    /* background:red; */
+    margin-bottom:.5em;
+  }
+  .form-div h1 {
+    color: #8e44ad;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(3, 2, 0, 0.5);
+  }
+  
+  .form-div .desc {
+    color: #8e44ad;
+    margin: -.3em 0 1.5em 1em;
+    text-shadow: 1px 1px 2px rgba(3, 2, 0, 0.3);
+  }
+  
+  form {
+    width: 100%;
+    margin: auto;
+  }
+  
+  form p {
+    text-align: right;
+    margin-top: .5em;
+    color: #999;
+    font-size: .9rem;
+  }
+  
+  form p a {
+    display: inline-block;
+    color: #8e44ad;
+    font-weight: 1400;
+  }
+  
+  form input {
+    border: 1px solid #747272;
+    width: 100%;
+    outline: none;
+    padding: .5em;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 1rem;
+    transition: .5s;
+    font-weight: 500;
+    color: #030200;
+    transition-property: border-color;
+    margin-bottom:1em;
+  }
+  
+  form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  
+  input[type=submit] {
+    background-color: #8e44ad;
+    border: 2px solid #8e44ad;
+    color: white;
+    cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    margin-top:1em;
+  }
+  
+  input[type=submit]:hover {
+    color: #8e44ad;
+    background: transparent;
+  }
+  
+  @media (min-width: 800px) {
+    .form-div {
+      max-width: 40vw;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .form-div {
+      padding: .5em 1em 1.5em;
+    }
+    .form-div h1 {
+      font-size: 2rem;
+    }
+  }
+  
