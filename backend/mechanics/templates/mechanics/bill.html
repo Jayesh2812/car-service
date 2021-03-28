@@ -11,6 +11,14 @@
     <title>Document</title>
 </head>
 <body>
+    <ul class="nav bg-light p-2">
+        <li class="nav-item">
+          <h6 class="nav-link active" aria-current="page">Hello {{user}}!</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        </li>
+      </ul>
     
     
     <div class="container mt-4">

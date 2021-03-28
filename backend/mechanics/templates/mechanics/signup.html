@@ -1,0 +1,21 @@
+{% extends 'mechanics/base.html' %}    
+{% load static %}
+{% block style %}  
+<link rel="stylesheet" href="{% static 'customers/css/login.css' %}">
+{% endblock style %}
+
+{% block title %}  SignUp {% endblock title %}
+
+{% block body %}
+
+    <div class="form-div">
+        <h1>Welcome,</h1>
+        <p class="desc">Log in to your Account</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Create Account">
+            <p>Already have a account <a href="{% url 'login'%}">Log In here</a></p>
+        </form>
+    </div>
+{% endblock body %}

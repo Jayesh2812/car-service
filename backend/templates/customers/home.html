@@ -1,0 +1,22 @@
+{% include 'customers/base2.html' %}    
+{% load static %}
+{% block content %}
+<h2 class="text-center mt-4">List of availabe service centers near you</h2>
+<div class="container">
+    {% for service in sc %}
+    <div class="row border mt-4 p-2 text-center">
+        <div class="col-md-4">
+            <h6>Service Center</h6>
+            <p>{{service.centerName}}</p>
+        </div>
+        <div class="col-md-4">
+            <h6>Contact Number</h6>
+            <p>{{service.phoneNo}}</p>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'customers:servicecenter' service.id %}">View</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

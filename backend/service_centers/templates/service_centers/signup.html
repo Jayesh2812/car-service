@@ -1,0 +1,21 @@
+{% extends 'service_centers/base.html' %}    
+{% load static %}
+{% block style %}  
+<link rel="stylesheet" href="{% static 'service_centers/css/login.css' %}">
+{% endblock style %}
+
+{% block title %} Service Center SignUp {% endblock title %}
+
+{% block body %}
+
+<div class="form-div">
+    <h1>Welcome,</h1>
+    <p class="desc">Log in to your Account</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Create Account">
+        <p>Already have a account <a href="{% url 'service_center:login'%}">Log In here</a></p>
+    </form>
+</div>
+{% endblock body %}
